@@ -13,13 +13,18 @@
 from typing import List
 
 class Solution:
-    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+    def kidsWithCandies(candies: List[int], extraCandies: int) -> List[bool]:
         result = [] # 1. Initialize the list to store result
         maxCandies = max(candies) # 2. Find maxCandies from the integer array candies.
         for i in range(len(candies)): # 3. Iterate over candies to compare maxCandies & (candies + extra candies) and add boolean result to answer
             result.append(candies[i] + extraCandies >= maxCandies)
         return result # 4. Return answer
+    print(kidsWithCandies([2,3,1,5,6], 3)) # Test Cases
+
 
 
 # Time complexity: O(n) => Iteration for finding maxCandies and for comparison
 # Space Complexity: O(1) => no extra space other than integers(maxCandies & candy)
+
+
+
